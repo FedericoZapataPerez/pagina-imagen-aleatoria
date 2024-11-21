@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imágenes Aleatorias</title>
+</head>
+<body>
+  <h1>Imagen Aleatoria</h1>
+  <img id="randomImage" alt="Imagen aleatoria" style="max-width: 80%; border: 2px solid #333; margin: 20px;">
+  <br>
+  <button onclick="showRandomImage()">Mostrar Otra Imagen</button>
+  <script>
+    // Lista de imágenes
+    const images = [
+      'https://via.placeholder.com/300x200?text=Imagen+1',
+      'https://via.placeholder.com/300x200?text=Imagen+2',
+      'https://via.placeholder.com/300x200?text=Imagen+3'
+    ];
+
+    // Función para mostrar una imagen aleatoria
+    function showRandomImage() {
+      const randomIndex = Math.floor(Math.random() * images.length);
+      document.getElementById('randomImage').src = images[randomIndex];
+    }
+
+    // Mostrar una imagen al cargar la página
+    showRandomImage();
+  </script>
+</body>
+</html>
